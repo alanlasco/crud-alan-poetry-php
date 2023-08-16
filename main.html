@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="poemas">
+      <script>
+        const url ='http://localhost/BackEndconPHP/carga-datos/mostrar-api.php';
+        const poemas = document.getElementById('poemas');
+
+            // Realizar la solicitud a la API utilizando fetch
+            fetch(url)
+                .then(datos => datos.json())
+                .then(datos =>{
+                    console.log(datos);
+                    for(let dato of datos){
+                        poemas.innerHTML += `
+                        <p>${dato.fecha} ${dato.nombre} ${dato.poema} </p>
+                        `
+                    }
+                })
+                .catch(error => console.log(error))
+
+
+      </script>
+    </div>
+</body>
+</html>

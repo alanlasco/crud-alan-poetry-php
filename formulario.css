@@ -1,0 +1,10 @@
+.formulario{
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+}
+.titulo{
+    text-align: center;
+    padding-top: 50px;
+}
