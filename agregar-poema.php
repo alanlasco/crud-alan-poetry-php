@@ -22,6 +22,9 @@
     <textarea name="poema" id="poema" cols="30" rows="10" required>
     </textarea>
     <br>
+    <label for="favorita">Es un poema favorito? 1=Si 2=No  </label>
+    <input type="number" name="favorita" id="favorita" required>
+    <br>
     <input type="submit" value="Agregar">
   </form>
     

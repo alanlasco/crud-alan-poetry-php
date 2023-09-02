@@ -8,9 +8,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obtener los datos del formulario
     $nombre = $_POST["nombre"];
     $poema = $_POST["poema"];
-
+    $favorita = $_POST["favorita"];
     // Preparar la consulta SQL
-    $sql= "INSERT INTO poemas (nombre, poema, fecha) VALUES ('$nombre', '$poema', CURRENT_TIME())";
+    $sql= "INSERT INTO poemas (nombre, poema, fecha, favorita) VALUES ('$nombre', '$poema', CURRENT_TIME(), $favorita)";
     // Ejecutar la consulta
     if ($conexion->query($sql) === TRUE) {
         $error.= "Elemento agregado correctamente.";

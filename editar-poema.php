@@ -27,6 +27,10 @@
     <label for="nuevo-poema">Nuevo poema: </label>
     <textarea name="nuevo-poema" id="poema" cols="30" rows="10" required>
     </textarea>
+    <br>
+    <label for="nuevo-favorita">Es un poema favorito? 1=Si 0=No  </label>
+    <input type="number" name="nuevo-favorita" id="favorita" required>
+    <br>
     <input type="submit" name='editar' value="Editar">
     </form>
     </div>

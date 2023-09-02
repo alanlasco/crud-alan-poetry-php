@@ -8,9 +8,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id_poema = $_POST["id_poema"];
     $nuevo_poema = $_POST["nuevo-poema"];
     $nuevo_titulo = $_POST["nuevo-titulo"];
+    $favorita = $_POST["nuevo-favorita"];
     // Preparar la consulta SQL con una consulta preparada
     //Utiliza un marcador de posición ? para el valor del ID.
-    $sql = "SELECT id_poema, poema, nombre FROM poemas WHERE id_poema = ?";
+    $sql = "SELECT id_poema, poema, nombre, favorita FROM poemas WHERE id_poema = ?";
     
     // Preparar la consulta y vincular el parámetro
     $stmt = $conexion->prepare($sql);
@@ -33,11 +34,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //preparar el borrado del elemento
     if ($poemaEncontrado && isset($_POST["editar"])) {
     // Preparar la consulta SQL para eliminar el poema por su ID
-    $sql_update = "UPDATE poemas SET poema = ? , nombre = ? WHERE id_poema = ?";
+    $sql_update = "UPDATE poemas SET poema = ? , nombre = ? , favorita = ? WHERE id_poema = ?";
     
     // Preparar la consulta y vincular el parámetro
     $stmt_update = $conexion->prepare($sql_update);
-    $stmt_update->bind_param("ssi", $nuevo_poema, $nuevo_titulo, $id_poema);
+    // es ssii porque mando dos string y dos integer
+    $stmt_update->bind_param("ssii", $nuevo_poema, $nuevo_titulo, $favorita, $id_poema);
     
     // Ejecutar la consulta de edicion
     if ($stmt_update->execute()) {
