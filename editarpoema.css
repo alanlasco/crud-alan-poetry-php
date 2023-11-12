@@ -4,3 +4,9 @@
     /* Centra horizontalmente */
     align-items: center;
 }
+.editar input{
+    margin-right: 1rem;
+}
+.editar textarea{
+    margin-right: 1rem;
+}

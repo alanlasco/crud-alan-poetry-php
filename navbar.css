@@ -15,3 +15,9 @@
 .navbar ul li{
     padding-left: 15px;
 }
+
+.navbar ul li a{
+        background-color: gray;
+        height: 5rem;
+        width: 5rem;
+}

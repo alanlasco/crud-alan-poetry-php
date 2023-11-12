@@ -7,7 +7,7 @@
     <?php
     require 'links.php'
     ?>
-    <link rel="stylesheet" href="editar-poema.css">
+    <link rel="stylesheet" href="editarpoema.css">
     <title>Editar</title>
 </head>
 <body>
