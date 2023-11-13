@@ -13,11 +13,22 @@
 }
 
 .navbar ul li{
-    padding-left: 15px;
+    margin-left: 15px;
+    background: gray;
+
+}
+
+.navbar ul li a:hover{
+    background: rgb(51, 50, 50);
+    color: white;
+    width: 3rem;
+    height: 3rem;
 }
 
 .navbar ul li a{
-        background-color: gray;
-        height: 5rem;
-        width: 5rem;
+    text-decoration: none;
+    padding: 2rem;
+    color: black;
+
+
 }
