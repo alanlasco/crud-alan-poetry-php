@@ -1,4 +1,6 @@
-
+<?php
+    require 'loginchecker.php';
+?>
 <nav class='navbar'>
     <ul>
         <li><a href="index.php">Volver</a></li>

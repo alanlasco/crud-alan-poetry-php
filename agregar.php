@@ -1,6 +1,7 @@
 
 <?php
 require 'config.php';
+require 'loginchecker.php';
 $error="";
 //$sql= 'INSERT INTO poemas (nombre, poema, fecha) VALUES ($nombre, $poema, $fecha_actual)';
 // Verificar que se haya enviado el formulario

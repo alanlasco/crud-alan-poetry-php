@@ -1,3 +1,6 @@
+<?php
+    require 'loginchecker.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

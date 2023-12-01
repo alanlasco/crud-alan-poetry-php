@@ -1,5 +1,6 @@
 
 <?php
+require 'loginchecker.php';
 require 'config.php';
 $error = "";
 

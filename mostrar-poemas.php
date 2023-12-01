@@ -1,5 +1,6 @@
 <?php
 require 'config.php';
+require 'loginchecker.php';
 session_start();
 $sql="SELECT fecha, id_poema, nombre, poema FROM poemas";
 
